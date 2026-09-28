@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_content_sections",
+  "info": { "displayName": "Content section", "icon": "layout" },
+  "attributes": {
+    "eyebrow": { "type": "string" },
+    "heading": { "type": "string", "required": true },
+    "body": { "type": "richtext" },
+    "image": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "imagePosition": { "type": "enumeration", "enum": ["left", "right"], "default": "right" },
+    "buttonLabel": { "type": "string" },
+    "buttonHref": { "type": "string" }
+  }
+}

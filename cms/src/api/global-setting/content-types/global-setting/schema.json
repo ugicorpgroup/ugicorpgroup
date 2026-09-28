@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "global_settings",
+  "info": { "singularName": "global-setting", "pluralName": "global-settings", "displayName": "Global Settings", "description": "Header, footer, contact details and site-wide settings" },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "siteName": { "type": "string", "required": true, "default": "UGI Corporation" },
+    "tagline": { "type": "string", "default": "Engineering a safer and more sustainable tomorrow" },
+    "logo": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "navigation": { "type": "component", "repeatable": true, "component": "shared.navigation-link" },
+    "email": { "type": "email", "default": "contact@ugicorpgroup.com" },
+    "phone": { "type": "string", "default": "+1 (647) 213-2228" },
+    "footerSummary": { "type": "text" },
+    "footerColumns": { "type": "component", "repeatable": true, "component": "shared.footer-column" },
+    "copyright": { "type": "string" },
+    "linkedinUrl": { "type": "string" },
+    "youtubeUrl": { "type": "string" }
+  }
+}

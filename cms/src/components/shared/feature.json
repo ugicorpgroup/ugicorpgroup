@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_shared_features",
+  "info": { "displayName": "Feature", "icon": "check" },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "text": { "type": "text" },
+    "icon": { "type": "enumeration", "enum": ["engineering", "safety", "people", "sustainability", "oil", "power", "renewable", "infrastructure", "construction"] }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "collectionName": "components_shared_footer_columns",
+  "info": { "displayName": "Footer column", "icon": "bulletList" },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "links": { "type": "component", "repeatable": true, "component": "shared.navigation-link" }
+  }
+}

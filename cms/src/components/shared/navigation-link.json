@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_shared_navigation_links",
+  "info": { "displayName": "Navigation link", "icon": "link" },
+  "attributes": {
+    "label": { "type": "string", "required": true },
+    "href": { "type": "string", "required": true },
+    "isButton": { "type": "boolean", "default": false }
+  }
+}

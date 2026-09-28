@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": { "singularName": "article", "pluralName": "articles", "displayName": "News Article" },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "title", "required": true },
+    "category": { "type": "string" },
+    "excerpt": { "type": "text" },
+    "content": { "type": "richtext" },
+    "coverImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "publishedDate": { "type": "date" },
+    "externalUrl": { "type": "string" },
+    "featured": { "type": "boolean", "default": false }
+  }
+}

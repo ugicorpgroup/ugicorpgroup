@@ -1,4 +1,5 @@
 import Footer from "./components/footer";
+import HeroVideoSlider from "./components/hero-video-slider";
 import {
   Header,
   ScrollAnimations,
@@ -115,13 +116,7 @@ function Eyebrow({ children }) {
 }
 function Hero({ content = {} }) {
   return (
-    <section className="hero" id="home">
-      <Photo
-        src={cmsImage(content.heroImage, assets.hero)}
-        alt="Illuminated oil and gas processing plant at sunset"
-        className="hero-photo"
-        priority
-      />
+    <HeroVideoSlider poster={cmsImage(content.heroImage, assets.hero)}>
       <div className="hero-shade" />
       <div className="container hero-content">
         <p className="hero-kicker" data-hero>
@@ -151,7 +146,7 @@ function Hero({ content = {} }) {
           Discover UGI <ArrowRight size={17} />
         </a>
       </div>
-    </section>
+    </HeroVideoSlider>
   );
 }
 function About({ content = {} }) {

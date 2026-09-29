@@ -10,7 +10,14 @@ import { usePathname } from "next/navigation";
 export function ScrollToTop() {
   const pathname = usePathname();
   useLayoutEffect(() => {
-    if (!window.location.hash) window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    if (window.location.hash) return;
+
+    const resetScroll = () => window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    resetScroll();
+    // Finish after the router's layout effects so its scroll handling cannot
+    // override the new page's starting position.
+    const frame = window.requestAnimationFrame(resetScroll);
+    return () => window.cancelAnimationFrame(frame);
   }, [pathname]);
   return null;
 }

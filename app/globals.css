@@ -272,6 +272,66 @@ p {
 .hero-photo img {
   object-position: 60% 50%;
 }
+.hero-video-media {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.hero-video-poster,
+.hero-video {
+  object-fit: cover;
+  object-position: center;
+}
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+.hero-video.is-active { opacity: 1; }
+.hero-slider-controls {
+  position: absolute;
+  right: max(40px, calc((100% - 1240px) / 2));
+  bottom: 106px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  border: 1px solid #ffffff35;
+  border-radius: 40px;
+  background: #061e2b80;
+  backdrop-filter: blur(14px);
+  color: #fff;
+}
+.hero-slider-controls button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.hero-slider-controls button:hover { background: #ffffff18; }
+.hero-slider-controls button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.hero-slider-controls button[aria-current="true"] { color: var(--accent); }
+.hero-slider-pagination { position: relative; display: flex; padding-bottom: 3px; }
+.hero-slider-pagination button { font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+.hero-slider-progress { position: absolute; bottom: 3px; left: 10px; right: 10px; height: 2px; overflow: hidden; background: #ffffff30; }
+.hero-slider-progress > span { display: block; height: 100%; background: var(--accent); transform: scaleX(var(--progress, 0)); transform-origin: left; transition: transform .25s linear; }
+.hero-slider-divider { width: 1px; height: 18px; margin-inline: 3px; background: #ffffff30; }
+@media (max-width: 900px) {
+  .hero-video-slider .hero-content { padding-bottom: 195px; }
+  .hero-slider-controls { left: 28px; right: auto; bottom: 98px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-video, .hero-slider-progress > span { transition: none; }
+}
 .hero-shade {
   position: absolute;
   inset: 0;

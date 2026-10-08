@@ -58,7 +58,7 @@ const pageInfo = {
   },
   contact: {
     eyebrow: "Start a conversation",
-    title: "Let’s talk about your next project.",
+    title: "Let's talk about your next project.",
     intro:
       "Tell us what you are planning. Our team is ready to discuss engineering, project delivery, and process safety needs.",
     image: "/banner-home.png",
@@ -118,7 +118,7 @@ function CmsSections({ sections = [] }) {
   );
 }
 function Callout({
-  title = "Let’s bring your project to life.",
+  title = "Let's bring your project to life.",
   text = "Tell us about your scope and connect with our team.",
 }) {
   return (
@@ -289,7 +289,7 @@ function SafetyPage() {
         </div>
       </section>
       <Callout
-        title="Let’s discuss a safer path forward."
+        title="Let's discuss a safer path forward."
         text="Talk with our team about hazard studies, safety reviews, and program development."
       />
     </>
@@ -343,7 +343,7 @@ function CareersPage() {
           <h2>Tell us what you bring to the team.</h2>
           <p>
             Share your experience and the type of role you are interested in.
-            US GLOBAL IMPEX’s current site invites applications from engineering
+            US GLOBAL IMPEX&apos;s current site invites applications from engineering
             professionals.
           </p>
           <div className="career-note">
@@ -364,6 +364,10 @@ function ContactPage({ cms }) {
   const officeItems = (cms.offices?.length ? cms.offices : offices).filter(
     (office) => /\b(canada|canadian|pakistan|pakistani)\b/i.test(`${office.name} ${office.address}`),
   );
+  const headOffice = officeItems.find((office) => /canada|head office/i.test(office.name)) || officeItems[0];
+  const mapQuery = encodeURIComponent(headOffice?.address || "Calgary, Alberta, Canada");
+  const mapEmbedUrl = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
+  const directionsUrl = headOffice?.mapUrl || `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
   const contactEmail = cms.global?.email || "contact@ugicorpgroup.com";
   const contactPhone = cms.global?.phone || "+1 (647) 213-2228";
   return (
@@ -372,7 +376,7 @@ function ContactPage({ cms }) {
         <div className="container contact-page-grid">
           <div>
             <p className="eyebrow">Get in touch</p>
-            <h2>We’re ready to hear from you.</h2>
+            <h2>We&apos;re ready to hear from you.</h2>
             <p className="contact-page-lead">
               Whether you have a project enquiry or want to learn more about
               US GLOBAL IMPEX, reach out to our team.
@@ -409,6 +413,17 @@ function ContactPage({ cms }) {
             <h3>Send an enquiry</h3>
             <p>Tell us a little about your project or question.</p>
             <InquiryForm />
+          </div>
+        </div>
+        <div className="container contact-map" data-reveal>
+          <div className="contact-map-copy">
+            <p className="eyebrow">Find our head office</p>
+            <h2>Visit UGI in Canada.</h2>
+            <div className="contact-map-address"><MapPin size={20}/><div><strong>{headOffice?.name || "Canada Head Office"}</strong><p>{headOffice?.address || "Calgary, Alberta, Canada"}</p></div></div>
+            <a href={directionsUrl} target="_blank" rel="noopener noreferrer">Open in Google Maps <ArrowUpRight size={17}/></a>
+          </div>
+          <div className="contact-map-frame">
+            <iframe src={mapEmbedUrl} title={`Map showing ${headOffice?.name || "UGI Canada Head Office"}`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
           </div>
         </div>
       </section>

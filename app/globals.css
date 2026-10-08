@@ -2936,6 +2936,19 @@ body:has(dialog[open]) {
   line-height: 1.7;
 }
 
+.contact-map { display: grid; grid-template-columns: minmax(280px,.72fr) minmax(0,1.55fr); min-height: 465px; margin-top: 90px; overflow: hidden; border: 1px solid #dce5e8; border-radius: 8px; background: #fff; box-shadow: 0 20px 55px #102c3b12; }
+.contact-map-copy { position: relative; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; overflow: hidden; padding: clamp(35px,4.5vw,66px); color: #fff; background: radial-gradient(circle at 105% 105%,#1d5264,#082431 62%); }
+.contact-map-copy::after { content: ''; position: absolute; right: -110px; bottom: -150px; width: 330px; height: 330px; border: 1px solid #ffffff15; border-radius: 50%; box-shadow: 0 0 0 55px #ffffff07,0 0 0 110px #ffffff04; pointer-events: none; }
+.contact-map-copy .eyebrow { color: var(--accent); }
+.contact-map-copy h2 { max-width: 390px; margin-top: 10px; font-size: clamp(32px,3.3vw,47px); line-height: 1.08; letter-spacing: -.045em; }
+.contact-map-address { position: relative; z-index: 1; display: flex; gap: 13px; width: 100%; margin: 34px 0; padding-top: 24px; border-top: 1px solid #ffffff23; }
+.contact-map-address>svg { flex-shrink: 0; color: var(--accent); }
+.contact-map-address strong { display: block; margin-bottom: 6px; font-size: 13px; }
+.contact-map-address p { max-width: 300px; color: #b4c7cf; font-size: 12px; line-height: 1.7; }
+.contact-map-copy>a { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 14px; padding-bottom: 7px; border-bottom: 1px solid var(--accent); color: var(--accent); font-size: 12px; font-weight: 800; }
+.contact-map-frame { position: relative; min-height: 465px; background: #dbe4e7; }
+.contact-map-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: saturate(.72) contrast(1.04); }
+
 @media (max-width: 900px) {
 
   .intro-grid,
@@ -2963,6 +2976,8 @@ body:has(dialog[open]) {
   .news-preview {
     gap: 40px;
   }
+
+  .contact-map { grid-template-columns: .85fr 1.15fr; margin-top: 65px; }
 }
 
 @media (max-width: 700px) {
@@ -3078,6 +3093,12 @@ body:has(dialog[open]) {
   .office-list {
     margin-bottom: 15px;
   }
+
+  .contact-map { grid-template-columns: 1fr; min-height: 0; margin-top: 45px; }
+  .contact-map-copy { padding: 36px 28px 40px; }
+  .contact-map-copy h2 { font-size: 34px; }
+  .contact-map-address { margin: 25px 0; }
+  .contact-map-frame { min-height: 330px; }
 }
 
 @media (max-width: 380px) {

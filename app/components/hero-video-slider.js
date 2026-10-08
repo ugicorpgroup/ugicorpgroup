@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 
-const videos = ["/video-1.mp4", "/video-2.mp4"];
+const videos = ["/video-1.mp4", "/video-2.mp4", "/video-3.mp4", "/video-4.mp4", "/video-5.mp4", "/video-6.mp4"];
 const motionQuery = "(prefers-reduced-motion: reduce)";
 function subscribeToMotion(callback) {
   const media = window.matchMedia(motionQuery);
@@ -61,7 +61,7 @@ export default function HeroVideoSlider({ poster, children }) {
   const advance = (direction) => setActive((index) => (index + direction + videos.length) % videos.length);
 
   return (
-    <section className="hero hero-video-slider" id="home" ref={section} aria-label="UGI Corporation highlights" aria-roledescription="carousel">
+    <section className="hero hero-video-slider hero-reference" id="home" ref={section} aria-label="US GLOBAL IMPEX highlights" aria-roledescription="carousel">
       <div className="hero-video-media" aria-hidden="true">
         <Image src={poster} alt="" fill sizes="100vw" preload className="hero-video-poster" />
         {videos.map((src, index) => (

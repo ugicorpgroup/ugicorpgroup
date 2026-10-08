@@ -23,9 +23,9 @@ export default {
     },
     translations: {
       en: {
-        'Auth.form.welcome.title': 'Welcome to UGI Content Hub',
+        'Auth.form.welcome.title': 'Welcome to US GLOBAL IMPEX Content Hub',
         'Auth.form.welcome.subtitle': 'Sign in to manage website content and media',
-        'app.components.LeftMenu.navbrand.title': 'UGI Content Hub',
+        'app.components.LeftMenu.navbrand.title': 'US GLOBAL IMPEX Content Hub',
         'app.components.LeftMenu.navbrand.workplace': 'Website administration'
       }
     },

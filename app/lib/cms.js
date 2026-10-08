@@ -1,3 +1,5 @@
+import { normalizeBrandContent } from "./brand";
+
 const CMS_URL = (process.env.STRAPI_URL || "http://127.0.0.1:1337").replace(/\/$/, "");
 
 async function request(path) {
@@ -10,7 +12,7 @@ async function request(path) {
     });
     if (!response.ok) return null;
     const payload = await response.json();
-    return payload.data ?? null;
+    return normalizeBrandContent(payload.data ?? null);
   } catch {
     return null;
   }
@@ -44,4 +46,12 @@ export async function getPageContent(slug) {
     request("global-setting?populate=*"),
   ]);
   return { page: page?.[0] || null, services, projects, articles, offices, global };
+}
+
+export async function getServiceContent() {
+  const [services, global] = await Promise.all([
+    request("services?populate=*&sort=order:asc&pagination[pageSize]=50"),
+    request("global-setting?populate=*"),
+  ]);
+  return { services, global };
 }

@@ -129,22 +129,21 @@ function Hero({ content = {} }) {
         <p className="hero-description" data-hero>
           {content.heroDescription || "Engineering, procurement, construction management, and process safety solutions for the oil and gas, petrochemical, power, renewable energy, and infrastructure sectors."}
         </p>
-        <p className="hero-capabilities" data-hero>
-          Feasibility <span>|</span> FEED <span>|</span> Detailed Engineering{" "}
-          <span>|</span> Process Safety <span>|</span> Commissioning
-        </p>
         <div className="button-row" data-hero>
           <Button href={content.heroPrimaryHref || "/services"}>{content.heroPrimaryLabel || "Explore Our Services"}</Button>
           <Button href={content.heroSecondaryHref || "/contact"} outline>{content.heroSecondaryLabel || "Request a Proposal"}</Button>
         </div>
+        <div className="hero-support" data-hero>
+          <span className="hero-bottom-label"><ShieldCheck size={15} aria-hidden="true" />ENGINEERING & TURNKEY SOLUTIONS</span>
+          <a href="#about">Discover US GLOBAL IMPEX <ArrowRight size={15} aria-hidden="true" /></a>
+        </div>
       </div>
       <div className="hero-bottom container" data-hero>
-        <span className="hero-bottom-label">
-          ENGINEERING & TURNKEY SOLUTIONS
-        </span>
-        <a href="#about">
-          Discover UGI <ArrowRight size={17} />
-        </a>
+        <ul className="hero-capabilities">
+          {[[ScanSearch, "Feasibility"], [ClipboardCheck, "FEED"], [Atom, "Detailed Engineering"], [ShieldCheck, "Process Safety"], [HardHat, "Commissioning"]].map(([Icon, label]) => (
+            <li key={label}><span className="hero-capability-icon"><Icon size={19} strokeWidth={1.5} aria-hidden="true" /></span><span>{label}</span></li>
+          ))}
+        </ul>
       </div>
     </HeroVideoSlider>
   );
@@ -164,10 +163,10 @@ function About({ content = {} }) {
             {content.aboutLead || "with 10 years of experience in the hydrocarbon industry."}
           </p>
           <p>
-            {content.aboutBody || "UGI Corporation provides innovative and cost-effective engineering, procurement, construction management, and process safety solutions to clients across the oil and gas, petrochemical, power, renewable energy, and infrastructure sectors."}
+            {content.aboutBody || "US GLOBAL IMPEX provides innovative and cost-effective engineering, procurement, construction management, and process safety solutions to clients across the oil and gas, petrochemical, power, renewable energy, and infrastructure sectors."}
           </p>
           <DetailButton
-            title="About UGI Corporation"
+            title="About US GLOBAL IMPEX"
             description="A Canada-headquartered engineering consultancy with 10 years of experience in the hydrocarbon industry. Our multidisciplinary team supports projects from feasibility and FEED through detailed engineering, procurement, construction, and commissioning."
             className="button"
           >
@@ -226,7 +225,7 @@ function Services({ content = {}, items }) {
                   <p>{text}</p>
                 </div>
                 <Link
-                  href={slug ? `/services#${slug}` : "/services"}
+                  href={slug ? `/services/${slug}` : "/services"}
                   className="card-arrow"
                   aria-label={`Learn about ${title}`}
                 >
@@ -432,7 +431,7 @@ function News({ content = {}, items }) {
         </div>
         <div className="news-editorial" data-reveal>
           <div className="news-editorial-copy">
-            <span className="news-editorial-index">UGI PERSPECTIVES / 01</span>
+            <span className="news-editorial-index">US GLOBAL IMPEX PERSPECTIVES / 01</span>
             <div>
               <span className="news-status">Published article</span>
               <h3>{featured.title}</h3>
@@ -451,7 +450,7 @@ function News({ content = {}, items }) {
               fill
               sizes="(max-width: 700px) 100vw, 50vw"
             />
-            <span>GAS PROCESSING / UGI CORPORATION</span>
+            <span>GAS PROCESSING / US GLOBAL IMPEX</span>
           </div>
         </div>
         <div className="news-topics" aria-label="Topics we follow" data-reveal>
@@ -481,7 +480,7 @@ function GetInTouch({ content = {}, global = {} }) {
           <a href="tel:+16472132228">
             <Phone size={18} /> {global.phone || "+1 (647) 213-2228"}
           </a>
-          <span className="home-form-watermark" aria-hidden="true">UGI</span>
+          <span className="home-form-watermark" aria-hidden="true">US GLOBAL IMPEX</span>
         </div>
         <div className="home-form-fields" data-reveal>
           <p className="home-form-kicker">PROJECT ENQUIRY / 01</p>
@@ -502,7 +501,7 @@ function Contact({ content = {}, global = {} }) {
           <Eyebrow>{content.ctaEyebrow || "Let's work together"}</Eyebrow>
           <h2>{content.ctaTitle || "Let's Build a Safer, More Sustainable Future"}</h2>
           <p>
-            {content.ctaDescription || "Discuss your project with our team and explore how UGI Corporation can support your goals."}
+            {content.ctaDescription || "Discuss your project with our team and explore how US GLOBAL IMPEX can support your goals."}
           </p>
         </div>
         <div className="contact-actions" data-reveal>
@@ -525,7 +524,7 @@ export default async function Home() {
   const content = cms.home || {};
   return (
     <>
-      <Header settings={cms.global} />
+      <Header settings={cms.global} services={cms.services} />
       <main>
         <Hero content={content} />
         <About content={content} />

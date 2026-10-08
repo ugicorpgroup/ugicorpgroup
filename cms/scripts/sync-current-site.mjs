@@ -45,7 +45,7 @@ await save('home', home.documentId, {
   heroDescription: 'Engineering, procurement, construction management, and process safety solutions for the oil and gas, petrochemical, power, renewable energy, and infrastructure sectors.',
   heroImage: media['banner-home-2.png'].id, heroPrimaryLabel: 'Explore Our Services', heroPrimaryHref: '/services', heroSecondaryLabel: 'Request a Proposal', heroSecondaryHref: '/contact',
   aboutEyebrow: 'Who we are', aboutTitle: 'A Canada-headquartered engineering consultancy', aboutLead: 'with 10 years of experience in the hydrocarbon industry.',
-  aboutBody: 'UGI Corporation provides innovative and cost-effective engineering, procurement, construction management, and process safety solutions to clients across the oil and gas, petrochemical, power, renewable energy, and infrastructure sectors.',
+  aboutBody: 'US GLOBAL IMPEX provides innovative and cost-effective engineering, procurement, construction management, and process safety solutions to clients across the oil and gas, petrochemical, power, renewable energy, and infrastructure sectors.',
   aboutImage: media['who-we-are.png'].id, servicesEyebrow: 'Our services', servicesTitle: 'Integrated Solutions for a Complex World',
   projectsEyebrow: 'Featured projects', projectsTitle: 'Delivering Real Project Value', projectsDescription: 'We take pride in delivering complex projects that create value for our clients and communities.',
     industriesEyebrow: 'Industries we serve', industriesTitle: 'Expertise Across Key Sectors', industriesDescription: 'We provide sector-specific solutions to meet the evolving needs of our clients worldwide.',
@@ -53,7 +53,7 @@ await save('home', home.documentId, {
   safetyEyebrow: 'Process safety management', safetyTitle: 'Safer Operations for a Better Tomorrow', safetyDescription: 'We integrate process safety into every stage of the project lifecycle, helping our clients manage risk and achieve reliable, efficient operations.',
   newsEyebrow: 'From the newsroom', newsTitle: 'Updates and insights', newsDescription: 'A space for the ideas, projects and perspectives shaping a safer energy future.',
   contactEyebrow: 'Start a conversation', contactTitle: 'Get in Touch', contactDescription: 'Tell us what you are planning. Our team can help shape a practical path from your first question to project delivery.',
-  ctaEyebrow: "Let's work together", ctaTitle: "Let's Build a Safer, More Sustainable Future", ctaDescription: 'Discuss your project with our team and explore how UGI Corporation can support your goals.'
+  ctaEyebrow: "Let's work together", ctaTitle: "Let's Build a Safer, More Sustainable Future", ctaDescription: 'Discuss your project with our team and explore how US GLOBAL IMPEX can support your goals.'
 });
 
 const cmsServices = await get('services');

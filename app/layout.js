@@ -4,7 +4,7 @@ import "./globals.css";
 import { ScrollToTop } from "./components/interactions";
 export const metadata = {
   icons: { icon: "/logo.jpeg", apple: "/logo.jpeg" },
-  title: "UGI Corporation | Engineering & Turnkey Solutions",
+  title: "US GLOBAL IMPEX | Engineering & Turnkey Solutions",
   description:
     "Canada-headquartered engineering consultancy delivering engineering, procurement, construction management and process safety solutions for a better tomorrow.",
 };

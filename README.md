@@ -1,6 +1,6 @@
-# UGI Corporation website and custom CMS
+# US GLOBAL IMPEX website and custom CMS
 
-The public site is a Next.js application. Strapi runs as the content, database, authentication, and media backend. Editors use the custom UGI interface at `/admin`; Strapi's standard admin panel is disabled.
+The public site is a Next.js application. Strapi runs as the content, database, authentication, and media backend. Editors use the custom US GLOBAL IMPEX interface at `/admin`; Strapi's standard admin panel is disabled.
 
 ## Local development
 

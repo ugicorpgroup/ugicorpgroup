@@ -45,7 +45,7 @@ export default function InquiryForm({ career = false }) {
     const url = `mailto:contact@ugicorpgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = url;
     setMessage(
-      "Your email app will open with the completed message. Please send it there to contact UGI.",
+      "Your email app will open with the completed message. Please send it there to contact US GLOBAL IMPEX.",
     );
   }
   return (

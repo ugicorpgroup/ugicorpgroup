@@ -26,7 +26,7 @@ export const services = [
     id: "natural-gas-processing",
     title: "Natural Gas Processing",
     image: "/service-3.avif",
-    text: "UGI Corporation provides multidisciplinary engineering and project support for natural gas processing facilities. Our capabilities cover gas gathering and compression, inlet separation, amine gas sweetening, glycol dehydration, hydrocarbon and water dew-point control, LPG and NGL recovery, condensate stabilization, utilities, offsites, and associated pipeline systems.Our services include feasibility studies, process simulation, FEED, detailed engineering, equipment sizing and specification, debottlenecking, process safety studies, procurement support, construction support, commissioning, and operational troubleshooting.We develop safe, reliable, and energy- efficient solutions for both greenfield and brownfield facilities.",
+    text: "US GLOBAL IMPEX provides multidisciplinary engineering and project support for natural gas processing facilities. Our capabilities cover gas gathering and compression, inlet separation, amine gas sweetening, glycol dehydration, hydrocarbon and water dew-point control, LPG and NGL recovery, condensate stabilization, utilities, offsites, and associated pipeline systems.Our services include feasibility studies, process simulation, FEED, detailed engineering, equipment sizing and specification, debottlenecking, process safety studies, procurement support, construction support, commissioning, and operational troubleshooting.We develop safe, reliable, and energy- efficient solutions for both greenfield and brownfield facilities.",
     points: [
       "Process simulation",
       "Equipment sizing and specification",
@@ -50,7 +50,7 @@ export const services = [
     id: "construction-management",
     title: "Construction Management",
     image: "/service-5.avif",
-    text: "UGI Corporation provides construction management services for industrial, energy, and infrastructure projects. We support clients from construction planning and contractor mobilization through site execution, mechanical completion, commissioning, and project closeout. Our services include construction planning, contractor coordination, site supervision, progress monitoring, quality control, health and safety oversight, material tracking, schedule management, field engineering, technical query resolution, and coordination between engineering, procurement, construction, and client teams. We focus on safe execution, workmanship quality, schedule control, cost management, and compliance with approved drawings, specifications, codes, standards, and project requirements.",
+    text: "US GLOBAL IMPEX provides construction management services for industrial, energy, and infrastructure projects. We support clients from construction planning and contractor mobilization through site execution, mechanical completion, commissioning, and project closeout. Our services include construction planning, contractor coordination, site supervision, progress monitoring, quality control, health and safety oversight, material tracking, schedule management, field engineering, technical query resolution, and coordination between engineering, procurement, construction, and client teams. We focus on safe execution, workmanship quality, schedule control, cost management, and compliance with approved drawings, specifications, codes, standards, and project requirements.",
     points: [
       "Site execution",
       "Contractor coordination",
@@ -62,7 +62,7 @@ export const services = [
     id: "procurement-sourcing",
     title: "Procurement & Sourcing",
     image: "/service-6.avif",
-    text: "UGI Corporation provides procurement and sourcing support for engineered equipment, bulk materials, packaged systems, and specialized services required for industrial and energy projects. Our services include procurement planning, preparation of material requisitions and request-for-quotation packages, vendor identification, bid clarification, technical and commercial evaluation, purchase recommendation, vendor document review, inspection coordination, expediting, logistics support, and material tracking. We work with qualified manufacturers and suppliers to help clients obtain technically compliant equipment and materials at competitive cost while meeting required quality and project delivery schedules.",
+    text: "US GLOBAL IMPEX provides procurement and sourcing support for engineered equipment, bulk materials, packaged systems, and specialized services required for industrial and energy projects. Our services include procurement planning, preparation of material requisitions and request-for-quotation packages, vendor identification, bid clarification, technical and commercial evaluation, purchase recommendation, vendor document review, inspection coordination, expediting, logistics support, and material tracking. We work with qualified manufacturers and suppliers to help clients obtain technically compliant equipment and materials at competitive cost while meeting required quality and project delivery schedules.",
     points: [
       "Vendor evaluations",
       "Material requisitions",
@@ -78,9 +78,9 @@ export const projects = [
     location: "South Sudan",
     image: "/project-1.avif",
     summary:
-      "UGI Corporation successfully completed multi-discipline engineering services for the expansion of the Unity Power Plant in South Sudan, increasing the installed generation capacity to approximately 56 MW to support critical upstream oil and gas operations in the Unity oilfields. The project was executed as a brownfield expansion, integrating new power generation units with the existing plant while maintaining operational continuity and reliability.",
+      "US GLOBAL IMPEX successfully completed multi-discipline engineering services for the expansion of the Unity Power Plant in South Sudan, increasing the installed generation capacity to approximately 56 MW to support critical upstream oil and gas operations in the Unity oilfields. The project was executed as a brownfield expansion, integrating new power generation units with the existing plant while maintaining operational continuity and reliability.",
     details:
-      "UGI Corporation successfully completed multi-discipline engineering services for the expansion of the Unity Power Plant in South Sudan, increasing the installed generation capacity to approximately 56 MW to support critical upstream oil and gas operations in the Unity oilfields. The project was executed as a brownfield expansion, integrating new power generation units with the existing plant while maintaining operational continuity and reliability. The completed scope covered detailed electrical, instrumentation, and control engineering for power generation packages, auxiliary systems, medium- and low - voltage switchgear, transformers, protection and control systems, and associated power distribution networks.In line with the approved document index, UGI prepared and reviewed 80 + engineering deliverables, including load lists, single - line diagrams, equipment specifications and datasheets, cable schedules, P & IDs, instrument hook - up drawings, cause - and - effect diagrams, control philosophies, termination drawings, and construction - ready layouts. UGI also performed technical bid evaluations and cost comparisons to support informed procurement decisions, ensuring full compliance with IEC, IEEE, and client specifications.The completed engineering supported safe, efficient, and timely execution of the power plant expansion, providing reliable power infrastructure essential for sustained field production and facility operations in the Unity area.",
+      "US GLOBAL IMPEX successfully completed multi-discipline engineering services for the expansion of the Unity Power Plant in South Sudan, increasing the installed generation capacity to approximately 56 MW to support critical upstream oil and gas operations in the Unity oilfields. The project was executed as a brownfield expansion, integrating new power generation units with the existing plant while maintaining operational continuity and reliability. The completed scope covered detailed electrical, instrumentation, and control engineering for power generation packages, auxiliary systems, medium- and low - voltage switchgear, transformers, protection and control systems, and associated power distribution networks.In line with the approved document index, US GLOBAL IMPEX prepared and reviewed 80 + engineering deliverables, including load lists, single - line diagrams, equipment specifications and datasheets, cable schedules, P & IDs, instrument hook - up drawings, cause - and - effect diagrams, control philosophies, termination drawings, and construction - ready layouts. US GLOBAL IMPEX also performed technical bid evaluations and cost comparisons to support informed procurement decisions, ensuring full compliance with IEC, IEEE, and client specifications.The completed engineering supported safe, efficient, and timely execution of the power plant expansion, providing reliable power infrastructure essential for sustained field production and facility operations in the Unity area.",
     stat: "~56 MW",
   },
   {
@@ -98,9 +98,9 @@ export const projects = [
     location: "South Sudan",
     image: "/project-3.avif",
     summary:
-      "UGI Corporation successfully completed with multi-discipline engineering services for the Field Surface Facilities (FSF) and Power Distribution System project for Dar Petroleum Operating Company (DPOC) in South Sudan, executed under an intragroup engineering services contract with Petroman Engineering and Consultancy Services. The completed scope covered detailed engineering for wellhead tie-ins, pipelines, sand trap skids, pig launcher and receiver systems, instrumentation, electrical systems, and cathodic protection. ",
+      "US GLOBAL IMPEX successfully completed with multi-discipline engineering services for the Field Surface Facilities (FSF) and Power Distribution System project for Dar Petroleum Operating Company (DPOC) in South Sudan, executed under an intragroup engineering services contract with Petroman Engineering and Consultancy Services. The completed scope covered detailed engineering for wellhead tie-ins, pipelines, sand trap skids, pig launcher and receiver systems, instrumentation, electrical systems, and cathodic protection. ",
     details:
-      "UGI prepared and reviewed more than 70+ engineering deliverables, including material take-offs, material requisitions, approved datasheets, and construction-ready drawings, and executed technical bid evaluations and cost comparisons across multiple vendors. The work spanned key disciplines including Electrical (23 documents), Mechanical (13), Instrumentation (10), and Piping, ensuring full compliance with DPOC specifications, API/ASME standards, and project schedule requirements. The project enabled timely procurement decisions and supported successful execution of FSF infrastructure for operations.",
+      "US GLOBAL IMPEX prepared and reviewed more than 70+ engineering deliverables, including material take-offs, material requisitions, approved datasheets, and construction-ready drawings, and executed technical bid evaluations and cost comparisons across multiple vendors. The work spanned key disciplines including Electrical (23 documents), Mechanical (13), Instrumentation (10), and Piping, ensuring full compliance with DPOC specifications, API/ASME standards, and project schedule requirements. The project enabled timely procurement decisions and supported successful execution of FSF infrastructure for operations.",
     stat: "70+ deliverables",
   },
   {
@@ -109,7 +109,7 @@ export const projects = [
     location: "Nigeria",
     image: "/project-4.avif",
     summary:
-      "UGI Corporation conducted an engineering study for modifications to an existing flare system at a hydrocarbon-processing facility in Nigeria. The scope included review of pressure safety valves, assessment of required PSV modifications, evaluation of the existing flare system, and engineering assessment of a new flare stack.",
+      "US GLOBAL IMPEX conducted an engineering study for modifications to an existing flare system at a hydrocarbon-processing facility in Nigeria. The scope included review of pressure safety valves, assessment of required PSV modifications, evaluation of the existing flare system, and engineering assessment of a new flare stack.",
     stat: "Engineering study",
   },
   {
@@ -127,9 +127,9 @@ export const projects = [
     location: "International",
     image: "/project-6.avif",
     summary:
-      "UGI Corporation provided Basic Engineering support for the development of a 100 MMSCFD LPG processing facility. The project scope included an amine gas sweetening unit, a feasibility assessment for LPG recovery, utilities, offsite systems, and associated facilities.",
+      "US GLOBAL IMPEX provided Basic Engineering support for the development of a 100 MMSCFD LPG processing facility. The project scope included an amine gas sweetening unit, a feasibility assessment for LPG recovery, utilities, offsite systems, and associated facilities.",
     details:
-      "UGI team also participated in the project HAZOP and Safety Integrity Level studies to support the safe and reliable design of the facility.",
+      "US GLOBAL IMPEX team also participated in the project HAZOP and Safety Integrity Level studies to support the safe and reliable design of the facility.",
     stat: "100 MMSCFD",
   },
 ];

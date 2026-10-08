@@ -6,6 +6,7 @@ import { ArrowRight, ArrowUpRight, Mail, MapPin, Menu, Phone, X } from "lucide-r
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { usePathname } from "next/navigation";
+import ServicesDropdown from "./services-dropdown";
 
 export function ScrollToTop() {
   const pathname = usePathname();
@@ -21,7 +22,7 @@ export function ScrollToTop() {
   }, [pathname]);
   return null;
 }
-export function Header({ settings = {} }) {
+export function Header({ settings = {}, services }) {
   settings = settings || {};
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -59,14 +60,16 @@ export function Header({ settings = {} }) {
       </div>
       <div className="header-main">
         <div className="header-inner">
-          <Link href="/" className="brand" aria-label="UGI Corporation home" onClick={() => setOpen(false)}>
-            <span className="brand-image"><Image src="/logo.jpeg" alt="UGI Corporation" width={118} height={70} priority /></span>
+          <Link href="/" className="brand" aria-label="US GLOBAL IMPEX home" onClick={() => setOpen(false)}>
+            <span className="brand-image"><Image src="/logo.jpeg" alt="US GLOBAL IMPEX" width={118} height={70} priority /></span>
           </Link>
           <button className="menu-toggle" type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} aria-controls="main-navigation" onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
           <nav id="main-navigation" className={`navigation ${open ? "is-open" : ""}`} aria-label="Main navigation">
             <div className="nav-links">
               {links.map(({ label, href }) => (
-                <Link key={href} href={href} className={pathname === href ? "active" : ""} aria-current={pathname === href ? "page" : undefined} onClick={() => setOpen(false)}>{label}</Link>
+                href.replace(/\/$/, "") === "/services" ? (
+                  <ServicesDropdown key={`${href}-${open}`} label={label} services={services} active={pathname === "/services" || pathname.startsWith("/services/")} onNavigate={() => setOpen(false)} />
+                ) : <Link key={href} href={href} className={pathname === href ? "active" : ""} aria-current={pathname === href ? "page" : undefined} onClick={() => setOpen(false)}>{label}</Link>
               ))}
             </div>
             <Link href={buttonLink?.href || "/contact"} className={`nav-contact ${pathname === (buttonLink?.href || "/contact") ? "active" : ""}`} onClick={() => setOpen(false)}><span>{buttonLink?.label || "Start a project"}</span><ArrowUpRight size={18} /></Link>
@@ -112,12 +115,12 @@ export function DetailButton({
         >
           <X />
         </button>
-        <p className="eyebrow">UGI Corporation</p>
+        <p className="eyebrow">US GLOBAL IMPEX</p>
         <h2>{title}</h2>
         <p>{description}</p>
         <a
           className="button"
-          href="mailto:contact@ugicorpgroup.com?subject=UGI%20Inquiry"
+          href="mailto:contact@ugicorpgroup.com?subject=US%20GLOBAL%20IMPEX%20Inquiry"
         >
           Talk to Our Team <ArrowRight size={18} />
         </a>

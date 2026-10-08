@@ -1,3 +1,3 @@
 import AdminDashboard from "./ui";
-export const metadata = { title: "UGI Content Hub" };
+export const metadata = { title: "US GLOBAL IMPEX Content Hub" };
 export default function AdminPage() { return <AdminDashboard/>; }

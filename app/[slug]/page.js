@@ -26,7 +26,7 @@ const pageInfo = {
     eyebrow: "What we do",
     title: "Engineering solutions built around your project.",
     intro:
-      "From early studies through construction and start-up, UGI Corporation brings together engineering, project management, and delivery expertise for industrial and energy facilities. We work as an extension of your team, keeping every phase safe, coordinated, and aligned with your objectives.",
+      "From early studies through construction and start-up, US GLOBAL IMPEX brings together engineering, project management, and delivery expertise for industrial and energy facilities. We work as an extension of your team, keeping every phase safe, coordinated, and aligned with your objectives.",
     image: "/service-banner.png",
   },
   projects: {
@@ -44,7 +44,7 @@ const pageInfo = {
     image: "/photo-1607472586893-edb57bdc0e39.avif",
   },
   news: {
-    eyebrow: "UGI insights",
+    eyebrow: "US GLOBAL IMPEX insights",
     title: "News & updates.",
     intro: "Explore published articles on gas processing, water treatment, hydrogen production, and carbon capture.",
     image: "/photo-1595437193398-f24279553f4f.avif",
@@ -53,7 +53,7 @@ const pageInfo = {
     eyebrow: "Join our team",
     title: "Build a rewarding future with us.",
     intro:
-      "Connect with UGI Corporation about engineering and project opportunities.",
+      "Connect with US GLOBAL IMPEX about engineering and project opportunities.",
     image: "/photo-1581092583537-20d51b4b4f1b.avif",
   },
   contact: {
@@ -71,7 +71,7 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const info = pageInfo[slug];
   return info
-    ? { title: `${info.title} | UGI Corporation`, description: info.intro }
+    ? { title: `${info.title} | US GLOBAL IMPEX`, description: info.intro }
     : {};
 }
 function PageHero({ info }) {
@@ -125,7 +125,7 @@ function Callout({
     <section className="inner-callout">
       <div className="container inner-callout-content">
         <div>
-          <p className="eyebrow">Work with UGI</p>
+          <p className="eyebrow">Work with US GLOBAL IMPEX</p>
           <h2>{title}</h2>
           <p>{text}</p>
         </div>
@@ -166,8 +166,9 @@ function ServicesPage({ cms }) {
                   <span className="item-index">
                     0{index + 1} / 0{serviceItems.length}
                   </span>
-                  <h3>{item.title}</h3>
+                  <h3><Link href={`/services/${item.id}`}>{item.title}</Link></h3>
                   <p>{item.text}</p>
+                  <Link className="text-link service-detail-link" href={`/services/${item.id}`}>Explore service <ArrowRight size={17} /></Link>
                   <ul>
                     {item.points.map((point) => (
                       <li key={point}>
@@ -197,7 +198,7 @@ function ProjectsPage({ cms }) {
             <h2>Engineering work with real operational impact.</h2>
           </div>
           <p>
-            Each scope is different. These selected projects show how UGI
+            Each scope is different. These selected projects show how US GLOBAL IMPEX
             supports brownfield expansions, facility development, safety
             studies, and power infrastructure.
           </p>
@@ -257,7 +258,7 @@ function SafetyPage() {
             <h2>Safety thinking at every stage.</h2>
           </div>
           <p>
-            UGI supports the development, review, and improvement of process
+            US GLOBAL IMPEX supports the development, review, and improvement of process
             safety programs, from hazard analysis and mechanical integrity to
             audits and emergency response.
           </p>
@@ -302,10 +303,10 @@ function NewsPage({ cms }) {
       <div className="container">
         <div className="published-news-heading" data-reveal>
           <div>
-            <p className="eyebrow">From UGI Corporation</p>
+            <p className="eyebrow">From US GLOBAL IMPEX</p>
             <h2>Ideas across the energy landscape.</h2>
           </div>
-          <p>Discover articles published by UGI Corporation on the processes and technologies shaping industrial projects.</p>
+          <p>Discover articles published by US GLOBAL IMPEX on the processes and technologies shaping industrial projects.</p>
         </div>
         <div className="published-news-grid">
           {articleItems.map((article, index) => {
@@ -313,7 +314,7 @@ function NewsPage({ cms }) {
             return (
               <article className={`published-news-card ${index === 0 ? "published-news-card-featured" : ""}`} key={article.slug} data-reveal>
                 <div className="published-news-art" aria-hidden="true">
-                  <span className="published-news-art-index">UGI / {String(index + 1).padStart(2, "0")}</span>
+                  <span className="published-news-art-index">US GLOBAL IMPEX / {String(index + 1).padStart(2, "0")}</span>
                   <Icon size={index === 0 ? 94 : 74} strokeWidth={1.15} />
                   <span className="published-news-art-line" />
                 </div>
@@ -321,7 +322,7 @@ function NewsPage({ cms }) {
                   <div className="published-news-meta"><span>{article.category}</span><span>{article.date}</span></div>
                   <h3>{article.title}</h3>
                   {article.summary && <p>{article.summary}</p>}
-                  <a href={article.externalUrl || `https://ugicorpgroup.com/${article.slug}`} target="_blank" rel="noopener noreferrer" className="published-news-link" aria-label={`Read ${article.title} on UGI Corporation`}>
+                  <a href={article.externalUrl || `https://ugicorpgroup.com/${article.slug}`} target="_blank" rel="noopener noreferrer" className="published-news-link" aria-label={`Read ${article.title} on US GLOBAL IMPEX`}>
                     Read article <ArrowUpRight size={18} />
                   </a>
                 </div>
@@ -338,11 +339,11 @@ function CareersPage() {
     <section className="inner-list-section section">
       <div className="container career-layout">
         <div>
-          <p className="eyebrow">Careers at UGI</p>
+          <p className="eyebrow">Careers at US GLOBAL IMPEX</p>
           <h2>Tell us what you bring to the team.</h2>
           <p>
             Share your experience and the type of role you are interested in.
-            UGI’s current site invites applications from engineering
+            US GLOBAL IMPEX’s current site invites applications from engineering
             professionals.
           </p>
           <div className="career-note">
@@ -360,7 +361,9 @@ function CareersPage() {
   );
 }
 function ContactPage({ cms }) {
-  const officeItems = cms.offices?.length ? cms.offices : offices;
+  const officeItems = (cms.offices?.length ? cms.offices : offices).filter(
+    (office) => /\b(canada|canadian|pakistan|pakistani)\b/i.test(`${office.name} ${office.address}`),
+  );
   const contactEmail = cms.global?.email || "contact@ugicorpgroup.com";
   const contactPhone = cms.global?.phone || "+1 (647) 213-2228";
   return (
@@ -372,7 +375,7 @@ function ContactPage({ cms }) {
             <h2>We’re ready to hear from you.</h2>
             <p className="contact-page-lead">
               Whether you have a project enquiry or want to learn more about
-              UGI, reach out to our team.
+              US GLOBAL IMPEX, reach out to our team.
             </p>
             <div className="contact-direct">
               <a href={`mailto:${contactEmail}`}>
@@ -383,10 +386,10 @@ function ContactPage({ cms }) {
               </a>
             </div>
             <div className="contact-socials">
-              <span>Connect with UGI</span>
+              <span>Connect with US GLOBAL IMPEX</span>
               <div>
-                <a href="https://www.facebook.com/UGICanada/" target="_blank" rel="noopener noreferrer" aria-label="UGI Corporation on Facebook"><FacebookIcon size={19}/><span>Facebook</span><ArrowUpRight size={15}/></a>
-                <a href="https://www.linkedin.com/company/us-global-impex-corporation/about/" target="_blank" rel="noopener noreferrer" aria-label="UGI Corporation on LinkedIn"><LinkedInIcon size={19}/><span>LinkedIn</span><ArrowUpRight size={15}/></a>
+                <a href="https://www.facebook.com/UGICanada/" target="_blank" rel="noopener noreferrer" aria-label="US GLOBAL IMPEX on Facebook"><FacebookIcon size={19}/><span>Facebook</span><ArrowUpRight size={15}/></a>
+                <a href="https://www.linkedin.com/company/us-global-impex-corporation/about/" target="_blank" rel="noopener noreferrer" aria-label="US GLOBAL IMPEX on LinkedIn"><LinkedInIcon size={19}/><span>LinkedIn</span><ArrowUpRight size={15}/></a>
               </div>
             </div>
             <div className="office-list">
@@ -435,7 +438,7 @@ export default async function Page({ params }) {
   const Body = bodies[slug];
   return (
     <>
-      <Header settings={cms.global} />
+      <Header settings={cms.global} services={cms.services} />
       <main>
         <PageHero info={info} />
         <Body cms={cms} />

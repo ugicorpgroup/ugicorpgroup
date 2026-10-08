@@ -21,7 +21,7 @@ export default ({ strapi }: { strapi: Core.Strapi }) => ({
     if (!expectedPassword) return ctx.internalServerError('CMS admin credentials are not configured.');
     if (!equal(ctx.request.body?.email?.toLowerCase(), expectedEmail.toLowerCase()) || !equal(ctx.request.body?.password, expectedPassword)) return ctx.unauthorized('Invalid email or password.');
     const token = strapi.plugin('users-permissions').service('jwt').issue({ id: 'ugi-cms-admin', scope: 'ugi-cms-admin', email: expectedEmail }, { expiresIn: '8h' });
-    ctx.body = { token, user: { email: expectedEmail, name: 'UGI Administrator' } };
+    ctx.body = { token, user: { email: expectedEmail, name: 'US GLOBAL IMPEX Administrator' } };
   },
   async find(ctx: any) {
     if (!(await authorize(ctx, strapi))) return ctx.unauthorized(); const model = models[ctx.params.model]; if (!model) return ctx.badRequest('Unknown content model.');

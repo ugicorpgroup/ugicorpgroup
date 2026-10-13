@@ -474,8 +474,8 @@ function GetInTouch({ content = {}, global = {} }) {
           </p>
           <div className="home-form-divider" />
           <span className="home-form-direct-label">Prefer to contact us directly?</span>
-          <a href={`mailto:${global.email || "contact@ugicorpgroup.com"}`}>
-            <Mail size={18} /> {global.email || "contact@ugicorpgroup.com"}
+          <a href={`mailto:${global.email || "contact@usgiepc.com"}`}>
+            <Mail size={18} /> {global.email || "contact@usgiepc.com"}
           </a>
           <a href="tel:+16472132228">
             <Phone size={18} /> {global.phone || "+1 (647) 213-2228"}
@@ -506,9 +506,9 @@ function Contact({ content = {}, global = {} }) {
         </div>
         <div className="contact-actions" data-reveal>
           <Button href="/contact">Discuss Your Project</Button>
-          <a href={`mailto:${global.email || "contact@ugicorpgroup.com"}`}>
+          <a href={`mailto:${global.email || "contact@usgiepc.com"}`}>
             <Mail size={21} />
-            {global.email || "contact@ugicorpgroup.com"}
+            {global.email || "contact@usgiepc.com"}
           </a>
           <a href="tel:+16472132228">
             <Phone size={20} />

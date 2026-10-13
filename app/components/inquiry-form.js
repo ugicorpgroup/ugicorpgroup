@@ -42,7 +42,8 @@ export default function InquiryForm({ career = false }) {
     const subject = career
       ? `Career enquiry from ${form.get("name")}`
       : `Website enquiry from ${form.get("name") || "a visitor"}`;
-    const url = `mailto:contact@ugicorpgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const recipient = career ? "hr@usgiepc.com" : "contact@usgiepc.com";
+    const url = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = url;
     setMessage(
       "Your email app will open with the completed message. Please send it there to contact US GLOBAL IMPEX.",

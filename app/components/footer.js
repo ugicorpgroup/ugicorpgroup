@@ -24,7 +24,7 @@ const expertise = [
 
 export default function Footer({ settings = {} }) {
   settings = settings || {};
-  const email = settings.email || "contact@ugicorpgroup.com";
+  const email = settings.email || "contact@usgiepc.com";
   const phone = settings.phone || "+1 (647) 213-2228";
   return (
     <>
@@ -34,6 +34,7 @@ export default function Footer({ settings = {} }) {
           <Link href="/" className="footer-wordmark" aria-label="US GLOBAL IMPEX home">
             <Image src="/logo.jpeg" alt="US GLOBAL IMPEX" width={126} height={74} />
           </Link>
+          <p>US Global Impex (USGI EPC)</p>
           <p>{settings.footerSummary || "Practical engineering and project delivery for a safer, more sustainable future."}</p>
           <div className="footer-socials" aria-label="US GLOBAL IMPEX social media">
             <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" aria-label="US GLOBAL IMPEX on Facebook"><FacebookIcon size={17} /></a>

@@ -71,7 +71,7 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const info = pageInfo[slug];
   return info
-    ? { title: `${info.title} | US GLOBAL IMPEX`, description: info.intro }
+    ? { title: `${slug.split("-").map((word) => word[0].toUpperCase() + word.slice(1)).join(" ")} | US Global Impex | USGI EPC`, description: `US Global Impex (USGI EPC). ${info.intro}` }
     : {};
 }
 function PageHero({ info }) {
@@ -368,7 +368,7 @@ function ContactPage({ cms }) {
   const mapQuery = encodeURIComponent(headOffice?.address || "Calgary, Alberta, Canada");
   const mapEmbedUrl = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
   const directionsUrl = headOffice?.mapUrl || `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
-  const contactEmail = cms.global?.email || "contact@ugicorpgroup.com";
+  const contactEmail = cms.global?.email || "contact@usgiepc.com";
   const contactPhone = cms.global?.phone || "+1 (647) 213-2228";
   return (
     <>

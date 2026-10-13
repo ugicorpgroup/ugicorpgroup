@@ -37,7 +37,7 @@ export function Header({ settings = {}, services }) {
   const configuredLinks = settings.navigation?.filter((link) => !link.isButton);
   const links = configuredLinks?.length ? configuredLinks : defaultLinks;
   const buttonLink = settings.navigation?.find((link) => link.isButton);
-  const email = settings.email || "contact@ugicorpgroup.com";
+  const email = settings.email || "contact@usgiepc.com";
   const phone = settings.phone || "+1 (647) 213-2228";
   useEffect(() => {
     const closeOnEscape = (event) => {
@@ -120,7 +120,7 @@ export function DetailButton({
         <p>{description}</p>
         <a
           className="button"
-          href="mailto:contact@ugicorpgroup.com?subject=US%20GLOBAL%20IMPEX%20Inquiry"
+          href="mailto:contact@usgiepc.com?subject=US%20GLOBAL%20IMPEX%20Inquiry"
         >
           Talk to Our Team <ArrowRight size={18} />
         </a>

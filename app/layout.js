@@ -4,9 +4,10 @@ import "./globals.css";
 import { ScrollToTop } from "./components/interactions";
 export const metadata = {
   icons: { icon: "/logo.jpeg", apple: "/logo.jpeg" },
-  title: "US GLOBAL IMPEX | Engineering & Turnkey Solutions",
+  title: "US Global Impex | USGI EPC | Engineering & Turnkey Solutions",
   description:
-    "Canada-headquartered engineering consultancy delivering engineering, procurement, construction management and process safety solutions for a better tomorrow.",
+    "US Global Impex (USGI EPC) delivers engineering, procurement, construction management and process safety solutions for energy and industrial projects.",
+  keywords: ["US Global Impex", "USGI EPC", "engineering consultancy", "engineering procurement and construction", "construction management", "process safety management", "oil and gas engineering", "turnkey solutions"],
 };
 export default function RootLayout({ children }) {
   return (

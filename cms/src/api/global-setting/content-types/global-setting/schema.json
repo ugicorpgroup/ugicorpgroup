@@ -34,7 +34,7 @@
     },
     "email": {
       "type": "email",
-      "default": "contact@ugicorpgroup.com"
+      "default": "contact@usgiepc.com"
     },
     "phone": {
       "type": "string",

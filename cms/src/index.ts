@@ -106,7 +106,7 @@ export default {
       ctaEyebrow: "Let's work together", ctaTitle: "Let's Build a Safer, More Sustainable Future", ctaDescription: 'Discuss your project with our team and explore how US GLOBAL IMPEX can support your goals.'
     });
     if (!(await strapi.documents('api::global-setting.global-setting').findFirst())) await publish(strapi, 'api::global-setting.global-setting', {
-      siteName: 'US GLOBAL IMPEX', tagline: 'Engineering a safer and more sustainable tomorrow', email: 'contact@ugicorpgroup.com', phone: '+1 (647) 213-2228', whatsappNumber: '+1 (647) 213-2228',
+      siteName: 'US GLOBAL IMPEX', tagline: 'Engineering a safer and more sustainable tomorrow', email: 'contact@usgiepc.com', phone: '+1 (647) 213-2228', whatsappNumber: '+1 (647) 213-2228',
       footerSummary: 'Engineering, procurement, construction management, and process safety solutions for a better tomorrow.', copyright: `© ${new Date().getFullYear()} US GLOBAL IMPEX. All rights reserved.`,
       navigation: [
         { label: 'Home', href: '/', isButton: false }, { label: 'Services', href: '/services', isButton: false }, { label: 'Projects', href: '/projects', isButton: false },

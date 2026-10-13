@@ -27,8 +27,8 @@ function resolveService(cms, slug) {
 export async function generateMetadata({ params }) {
   const { service: slug } = await params;
   const item = resolveService(await loadContent(), slug);
-  if (!item) return { title: "Service not found | US GLOBAL IMPEX" };
-  return { title: `${item.title} | US GLOBAL IMPEX`, description: item.summary.slice(0, 160) };
+  if (!item) return { title: "Service not found | US Global Impex | USGI EPC" };
+  return { title: `${item.title} | US Global Impex | USGI EPC`, description: `US Global Impex (USGI EPC): ${item.summary}`.slice(0, 160) };
 }
 
 export default async function ServicePage({ params }) {

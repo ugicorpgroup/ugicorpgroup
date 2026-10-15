@@ -5,7 +5,7 @@ import { ArrowUp, ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { FacebookIcon, LinkedInIcon } from "./social-icons";
 
 const FACEBOOK_URL = "https://www.facebook.com/UGICanada/";
-const LINKEDIN_URL = "https://www.linkedin.com/company/us-global-impex-corporation/about/";
+const LINKEDIN_URL = "https://www.linkedin.com/company/us-global-usgi/";
 
 const explore = [
   ["Home", "/"],
@@ -28,51 +28,51 @@ export default function Footer({ settings = {} }) {
   const phone = settings.phone || "+1 (647) 213-2228";
   return (
     <>
-    <footer className="site-footer footer-reference">
-      <div className="container footer-primary">
-        <div className="footer-identity">
-          <Link href="/" className="footer-wordmark" aria-label="US GLOBAL IMPEX home">
-            <Image src="/logo.jpeg" alt="US GLOBAL IMPEX" width={126} height={74} />
-          </Link>
-          <p>US Global Impex (USGI EPC)</p>
-          <p>{settings.footerSummary || "Practical engineering and project delivery for a safer, more sustainable future."}</p>
-          <div className="footer-socials" aria-label="US GLOBAL IMPEX social media">
-            <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" aria-label="US GLOBAL IMPEX on Facebook"><FacebookIcon size={17} /></a>
-            <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="US GLOBAL IMPEX on LinkedIn"><LinkedInIcon size={17} /></a>
+      <footer className="site-footer footer-reference">
+        <div className="container footer-primary">
+          <div className="footer-identity">
+            <Link href="/" className="footer-wordmark" aria-label="US GLOBAL IMPEX home">
+              <Image src="/logo.jpeg" alt="US GLOBAL IMPEX" width={126} height={74} />
+            </Link>
+            <p>US Global Impex (USGI EPC)</p>
+            <p>{settings.footerSummary || "Practical engineering and project delivery for a safer, more sustainable future."}</p>
+            <div className="footer-socials" aria-label="US GLOBAL IMPEX social media">
+              <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" aria-label="US GLOBAL IMPEX on Facebook"><FacebookIcon size={17} /></a>
+              <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="US GLOBAL IMPEX on LinkedIn"><LinkedInIcon size={17} /></a>
+            </div>
+            <Link href="/contact" className="footer-cta">Let&apos;s work together <ArrowUpRight size={18} /></Link>
           </div>
-          <Link href="/contact" className="footer-cta">Let&apos;s work together <ArrowUpRight size={18} /></Link>
-        </div>
-        <div className="footer-column">
-          <h2>Explore</h2>
-          <nav aria-label="Footer navigation">{explore.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</nav>
-        </div>
-        <div className="footer-column">
-          <h2>Expertise</h2>
-          <nav aria-label="Expertise links">{expertise.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</nav>
-        </div>
-        <div className="footer-column footer-connect">
-          <h2>Start a conversation</h2>
-          <p>Have a project in mind? Connect with our team.</p>
-          <a href={`mailto:${email}`}><span><Mail size={17} /></span>{email}</a>
-          <a href={`tel:${phone.replace(/[^+\d]/g, "")}`}><span><Phone size={17} /></span>{phone}</a>
-          <div className="footer-location"><MapPin size={17} /><span>Canada Head Office<br />Calgary, Alberta</span></div>
-          <div className="footer-topline">
-            <span>ENGINEERING EXCELLENCE</span>
-            <span>SAFETY FIRST</span>
-            <span>GLOBAL PERSPECTIVE</span>
+          <div className="footer-column">
+            <h2>Explore</h2>
+            <nav aria-label="Footer navigation">{explore.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</nav>
+          </div>
+          <div className="footer-column">
+            <h2>Expertise</h2>
+            <nav aria-label="Expertise links">{expertise.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</nav>
+          </div>
+          <div className="footer-column footer-connect">
+            <h2>Start a conversation</h2>
+            <p>Have a project in mind? Connect with our team.</p>
+            <a href={`mailto:${email}`}><span><Mail size={17} /></span>{email}</a>
+            <a href={`tel:${phone.replace(/[^+\d]/g, "")}`}><span><Phone size={17} /></span>{phone}</a>
+            <div className="footer-location"><MapPin size={17} /><span>Canada Head Office<br />Calgary, Alberta</span></div>
+            <div className="footer-topline">
+              <span>ENGINEERING EXCELLENCE</span>
+              <span>SAFETY FIRST</span>
+              <span>GLOBAL PERSPECTIVE</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="footer-bottomline">
-        <div className="container footer-bottomline-inner">
-          <p>{settings.copyright || `© ${new Date().getFullYear()} US GLOBAL IMPEX. All rights reserved.`}</p>
-          <span>Engineered for a brighter tomorrow.</span>
-          <Link href="/contact">Contact us <ArrowUpRight size={15} /></Link>
-          <a href="#" className="footer-back-top" aria-label="Back to top"><ArrowUp size={17} /></a>
+        <div className="footer-bottomline">
+          <div className="container footer-bottomline-inner">
+            <p>{settings.copyright || `© ${new Date().getFullYear()} US GLOBAL IMPEX. All rights reserved.`}</p>
+            <span>Engineered for a brighter tomorrow.</span>
+            <Link href="/contact">Contact us <ArrowUpRight size={15} /></Link>
+            <a href="#" className="footer-back-top" aria-label="Back to top"><ArrowUp size={17} /></a>
+          </div>
         </div>
-      </div>
-    </footer>
-    <WhatsAppLink number={settings.whatsappNumber} />
+      </footer>
+      <WhatsAppLink number={settings.whatsappNumber} />
     </>
   );
 }

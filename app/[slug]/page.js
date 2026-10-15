@@ -392,8 +392,8 @@ function ContactPage({ cms }) {
             <div className="contact-socials">
               <span>Connect with US GLOBAL IMPEX</span>
               <div>
-                <a href="https://www.facebook.com/UGICanada/" target="_blank" rel="noopener noreferrer" aria-label="US GLOBAL IMPEX on Facebook"><FacebookIcon size={19}/><span>Facebook</span><ArrowUpRight size={15}/></a>
-                <a href="https://www.linkedin.com/company/us-global-impex-corporation/about/" target="_blank" rel="noopener noreferrer" aria-label="US GLOBAL IMPEX on LinkedIn"><LinkedInIcon size={19}/><span>LinkedIn</span><ArrowUpRight size={15}/></a>
+                <a href="https://www.facebook.com/UGICanada/" target="_blank" rel="noopener noreferrer" aria-label="US GLOBAL IMPEX on Facebook"><FacebookIcon size={19} /><span>Facebook</span><ArrowUpRight size={15} /></a>
+                <a href="https://www.linkedin.com/company/us-global-usgi/" target="_blank" rel="noopener noreferrer" aria-label="US GLOBAL IMPEX on LinkedIn"><LinkedInIcon size={19} /><span>LinkedIn</span><ArrowUpRight size={15} /></a>
               </div>
             </div>
             <div className="office-list">
@@ -419,8 +419,8 @@ function ContactPage({ cms }) {
           <div className="contact-map-copy">
             <p className="eyebrow">Find our head office</p>
             <h2>Visit UGI in Canada.</h2>
-            <div className="contact-map-address"><MapPin size={20}/><div><strong>{headOffice?.name || "Canada Head Office"}</strong><p>{headOffice?.address || "Calgary, Alberta, Canada"}</p></div></div>
-            <a href={directionsUrl} target="_blank" rel="noopener noreferrer">Open in Google Maps <ArrowUpRight size={17}/></a>
+            <div className="contact-map-address"><MapPin size={20} /><div><strong>{headOffice?.name || "Canada Head Office"}</strong><p>{headOffice?.address || "Calgary, Alberta, Canada"}</p></div></div>
+            <a href={directionsUrl} target="_blank" rel="noopener noreferrer">Open in Google Maps <ArrowUpRight size={17} /></a>
           </div>
           <div className="contact-map-frame">
             <iframe src={mapEmbedUrl} title={`Map showing ${headOffice?.name || "UGI Canada Head Office"}`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
